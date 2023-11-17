@@ -1,0 +1,18 @@
+#Guessing the number 
+#From the user perspective 
+
+import random
+print('Lets start')
+def guessing(x):
+    random_number = random.randint(1, x)
+    guessing = 0 
+    while guessing != random_number:
+        guessing = int(input(f'Guess a number between 1 and {x}: '))
+        if guessing < random_number:
+            print('Sorry, to low')
+        elif guessing > random_number:
+            print('Sorry, to high')
+        print(guessing)
+    print(f'Congratualgions!The random number is {random_number}')
+
+guessing(10)
